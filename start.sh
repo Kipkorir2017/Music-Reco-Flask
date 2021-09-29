@@ -1,3 +1,3 @@
-export SECRET_KEY='moringaflow'
+export SECRET_KEY='music'
 
 python3.8 manage.py server
