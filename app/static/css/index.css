@@ -1,0 +1,20 @@
+.title{
+    text-align:center;
+    font-weight:bold;
+    font-family: 'Lora', serif;
+}
+body{
+    font-family: 'Lora', serif;
+
+}
+#paragraph{
+    font-size: 20pt;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    
+}
+.footer-p{
+    padding-top:0%;
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel songs</title>
+    
+    
+</head>
+<!-- Content block -->
+{% block content %}
+<style>
+    h3 {
+        color: rgb(0, 0, 0);
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+    }
+    h1 {
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        color: brown;
+    }
+       .navbar ul, a{
+        font-family: 'Charm', cursive;
+    }
+        h2 {
+        font-family: 'Josefin Sans', sans-serif;
+        color: brown;
+        text-align: center;
+        font-size:35px;
+    }
+    p {
+        font-family: 'Charm', cursive;
+        font-size: 24px;
+    }
+    a {
+        font-family: 'Charm', cursive;
+    }
+    #owner {
+        font-weight: 600;
+        color: brown;
+    }
+</style>
+<div class="container">
+    <h2 class="card-title h1-responsive "> Gospel Songs</h2>
+    <hr>
+    <div class="row">
+        {{macro.displaySongs(gospel_songs)}}
+    </div>
+</div>
+{% endblock %}
+</html>

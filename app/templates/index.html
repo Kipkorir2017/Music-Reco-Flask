@@ -3,27 +3,110 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
 </head>
-    <!-- Styles block -->
-    {% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-    {% endblock %}
-    
-    <!-- content block -->
+<!-- Styles block -->
+{% block styles%}
+{{ super() }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+<!-- content block -->
+<div class="container-fluid">
+{% block content %}
+
+    <h1 class="title">Music Recommender</h1>
+    <hr>
+
     <div class="container">
-
-        {% block content %}
-        
-        <h1 class="title">Music Recommender</h1>
-        
-        {% endblock %}
-
+        <p id="paragraph">We are most delightfully welcoming you to the most amazing Music recommender,sign up and get
+            to listen to the
+            latest and most interesting music,leave a comment </p>
     </div>
-    
+
+    <div class="col display">
+        <a type="button" class="btn btn-primary text-center" href="{{url_for('main.new_song')}}">Post song</a>
+    </div>
+
+    <div class="container categories">
+        <h1 style="text-align:center; ">Available Categories</h1>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card ">
+                    <div class="well well-lg p-3" style="text-align: center;">
+                        <h3>Gospel</h3>
+                        <hr>
+                        <p>Gospel music often has dominant vocals (often with strong use of harmony) with Christian lyrics. Gospel music can be traced to the early 17th century. Hymns and sacred songs were often repeated in a call and response fashion.</p>
+                        <a href="{{url_for('main.Gospel')}}" class="btn btn-primary btn-center -center"
+                            style="font-size:22px;">
+                            Open</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class=" card">
+                    <div class="well well-lg p-3" style="text-align: center;">
+                        <h3>HipHop</h3>
+                        <hr>
+                        <p>Hip-hop, cultural movement that attained widespread popularity in
+                             the 1980s and '90s; also, the backing music for rap,
+                              the musical style incorporating rhythmic and/or rhyming speech that became 
+                            the movement's most lasting and influential art form.</p>
+                        <a href="{{url_for('main.HipHop')}}" class="btn btn-primary btn-center -center"
+                            style="font-size:22px;">
+                            Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card ">
+                    <div class="well well-lg p-3" style="text-align: center;">
+                        <h3>Reggae</h3>
+                        <hr>
+                        <p>Reggae is a music genre that originated in
+                             Jamaica in the late 1960s. The term also denotes the 
+                             modern popular music of Jamaica and its diaspora.[</p>
+                        <a href="{{url_for('main.Reggae')}}" class="btn btn-primary btn-center -center" style="font-size:22px;">
+                            Open</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class=" card">
+                    <div class="well well-lg p-3" style="text-align: center;">
+                        <h3>RnBs</h3>
+                        <hr>
+                        <p>R& B is a style of popular music developed in the 1940s
+                             from blues music, but using electrically amplified instruments.
+                             R&B is an abbreviation for ' rhythm and blues'.</p>
+                        <a href="{{url_for('main.RnB')}}" class="btn btn-primary btn-center -center" style="font-size:22px;">
+                            Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-p">
+        <footer class="page-footer">
+            <div style="background-color: #031214; color:#fff; font-size:12pt; padding: 1%;">
+                <div class="footer-copyright py-3" style="padding-left: 42%;">&#169;Copyright 2021: Moringa school
+                </div>
+            </div>
+        </footer>
+    </div>
+
+{% endblock %}
+</div>
+
 </html>

@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new song</title>
+    
+</head>
+<!-- Content block -->
+{% block content %}
+<style>
+    h3{
+        font-weight: 600;
+        color: brown;
+    }
+    h1 {
+        text-align: center;
+        font-weight: 600;
+        font-family: 'Charm', cursive;
+        color:blue
+        }
+    p {
+        font-family: 'Charm', cursive;
+        font-size: 24px;
+    }
+    .navbar ul, a{
+        font-family: 'Charm', cursive;
+    }
+    .category{
+        font-family: 'Charm', cursive;
+        font-size: 24px;
+        color: brown;
+    }
+    label{
+        font-family: 'Charm', cursive;
+        font-size: 24px;
+        color: brown;
+    }
+    button{
+        font-size: 28px;
+    }
+</style>
+<div class="container">
+    <h1>{{page_title}}</h1>
+    <hr>
+    <div class="col-md-12">
+        <div class="col-md-12">
+            {{ wtf.quick_form(song_form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+</html>
